@@ -1,11 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Link } from "react-router-dom";
 import {Information} from "./pages/Information";
 
 function App(){
   return (
-  <>
+  <BrowserRouter>
   <nav>
     <ul>
       <li>
@@ -17,10 +17,10 @@ function App(){
     </ul>
   </nav>
   <Routes>
-    <Route path="/" element={<Home />}></Route>
-    <Route path="/Information" element={<Information />}></Route>
+    <Route path="/" element={<Home />}/> 
+    <Route path="/Information" element={<Information />}/>
   </Routes>
-  </>
+  </BrowserRouter>
   )
 }
 export default App
